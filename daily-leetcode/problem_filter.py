@@ -29,7 +29,7 @@ def choose_question(attributes: dict) -> str:
     all_problems = filter_questions(
         difficulty=attributes['current_difficulty'], category=attributes['current_category'])
     if not all_problems:
-        return {"text": f"No questions found with:\n*Difficulty*: {attributes['current_difficulty']}\n*Category*: {attributes['current_category']}🙅🏻‍♂️"}
+        return {"text": f"No questions found with:\n*Difficulty*: {attributes['current_difficulty']}\n*Category*: {attributes['current_category']} :confused_dog:"}
     slug = all_problems[randrange(len(all_problems))]  # choose random problem
     title = slug.replace("-", " ")
 

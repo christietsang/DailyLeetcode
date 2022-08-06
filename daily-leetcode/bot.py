@@ -32,10 +32,10 @@ def difficulty():
     if level in ['Easy', 'Medium', 'Hard']:
         current_attributes["current_difficulty"] = level
         client.chat_postMessage(
-            channel=generate_channel_id(), text=f"Level is now *{level}*✔️")
+            channel=generate_channel_id(), text=f"Level is now *{level}* :cool-doge:")
     else:
         client.chat_postMessage(
-            channel=generate_channel_id(), text=f"{level} is invalid.🤔")
+            channel=generate_channel_id(), text=f"{level} is invalid. :sadpepe:")
 
     return Response(), 200
 
@@ -49,10 +49,10 @@ def category():
     if category in category_list:
         current_attributes["current_category"] = category
         client.chat_postMessage(
-            channel=generate_channel_id(), text=f"Category is now *{category}*✔️")
+            channel=generate_channel_id(), text=f"Category is now *{category}* :conga_parrot:")
     else:
         client.chat_postMessage(
-            channel=generate_channel_id(), text=f"{category} is invalid.🤭 `/options` for valid categories")
+            channel=generate_channel_id(), text=f"{category} is invalid. :blob_help: Try `/options` for valid categories")
     return Response(), 200
 
 
@@ -63,7 +63,7 @@ def options():
         message += f">`{question}` ({count})\n"
 
     client.chat_postMessage(
-        channel=generate_channel_id(), text=f"Your options are:\n{message}")
+        channel=generate_channel_id(), text=f"Your options are:\n{message} :catjam:")
 
     return Response(), 200
 
