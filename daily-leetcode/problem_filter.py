@@ -3,6 +3,10 @@ from random import randrange
 from leetcode_scraper import question_generator
 
 
+def generate_channel_id():
+    return "C03S9AM62SE"
+
+
 def get_data():
     string_data = question_generator()
     data = json.loads(string_data)
@@ -25,7 +29,8 @@ def choose_question(attributes: dict) -> str:
     all_problems = filter_questions(
         difficulty=attributes['current_difficulty'], category=attributes['current_category'])
     if not all_problems:
-        return {"text": f"No questions found with:\nDifficulty: {attributes['current_difficulty']}\nCategory: {attributes['current_category']}", 'channel': 'C03S0RK0J8P'}
+        return {"text": f"No questions found with:\n*Difficulty*: {attributes['current_difficulty']}\n*Category*: {attributes['current_category']}🙅🏻‍♂️"}
     slug = all_problems[randrange(len(all_problems))]  # choose random problem
+    title = slug.replace("-", " ")
 
-    return {"text": f"Today's problem is {attributes['current_difficulty']} and is categorized as a {attributes['current_category']} question.\nPost your answers below, but mark them using the spoiler tag.\n https://leetcode.com/problems/{slug}", 'channel': 'C03S0RK0J8P'}
+    return {"text": f"*Today's Problem:* {title.title()}\n*Difficulty*: {attributes['current_difficulty']}\n*Category*: {(attributes['current_category']).title()}\n >Post your answers below and mark them with a `/spoiler` tag.\n >https://leetcode.com/problems/{slug}"}

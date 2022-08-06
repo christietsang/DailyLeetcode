@@ -2,6 +2,7 @@ import json
 from leetcode_scraper import category_generator
 
 
+
 def get_data():
     string_data = category_generator()
     data = json.loads(string_data)
