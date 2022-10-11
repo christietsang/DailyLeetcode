@@ -1,2 +1,7 @@
 daily-leetcode/.env
 daily-leetcode/__pycache__/generator.cpython-310.pyc
+daily-leetcode\__pycache__\leetcode_scraper.cpython-310.pyc
+daily-leetcode\__pycache__\problem_filter.cpython-310.pyc
+daily-leetcode\__pycache__\category_compiler.cpython-310.pyc
+daily-leetcode/__pycache__/problem_filter.cpython-310.pyc
+daily-leetcode/__pycache__/category_compiler.cpython-310.pyc
