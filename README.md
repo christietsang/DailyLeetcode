@@ -15,6 +15,7 @@
     A slack bot that automatically sends Leetcode questions.  Users can change the difficulty level and category of the Leetcode question.  Users can also manually request a Leetcode question.
   </p>
 </div>
+<br>
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -36,14 +37,13 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
  In preparation for technical interviews, my friends and I were discussing ways to reduce friction in doing one technical programming question a day.  As a result, we created a bot that automatically sends a Leetcode question to our Slack channel.  Users can change the difficulty level and category of the Leetcode question.
+ 
+ Developed in two days as a personal project.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 ### Built With
